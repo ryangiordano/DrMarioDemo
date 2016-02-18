@@ -1,0 +1,14 @@
+*{
+   	transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+    transition-delay: initial;
+}
+body{
+	height:100%;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffeedb+100 */
+	font-family:  "Trebuchet MS", Helvetica, sans-serif;
+  background:url('../img/background.png');
+  background-repeat:repeat;
+
+}
