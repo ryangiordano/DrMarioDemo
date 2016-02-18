@@ -1,14 +1,84 @@
-*{
-   	transition-property: all;
-    transition-duration: 0.2s;
-    transition-timing-function: ease;
-    transition-delay: initial;
+* {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  transition-delay: initial;
 }
-body{
-	height:100%;
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffeedb+100 */
-	font-family:  "Trebuchet MS", Helvetica, sans-serif;
-  background:url('../img/background.png');
-  background-repeat:repeat;
+body {
+  height: 100%;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffeedb+100 */
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  background: url('../img/background.png');
+  background-repeat: repeat;
+}
+.buffer {
+  padding-top: 60px;
+}
+
+
+/*Navbar Styling*/
+.navbar-default {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/*Main content styling*/
+
+.content-panel {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  border: 1px solid #656565;
+  min-height:100px
+}
+.titleContainer{
+  margin-top:5em;
+  margin-bottom:5em;
+  width:100%;
+
 
 }
+.titleContainer img{
+  margin:0 auto;
+}
+.titleContainer h2{
+  margin:0 auto;
+  text-align:center
+}
+
+.section-tag{
+  border-top-right-radius:5px;
+  border-bottom-right-radius:5px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+0,1+100 */
+background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+padding:10px 15px;
+min-height:50px;
+display:block;
+}
+/*==========  Non-Mobile First Method  ==========*/
+
+  /* Large Devices, Wide Screens */
+  @media only screen and (max-width : 1200px) {
+
+  }
+
+  /* Medium Devices, Desktops */
+  @media only screen and (max-width : 992px) {
+
+  }
+
+  /* Small Devices, Tablets */
+  @media only screen and (max-width : 768px) {
+
+  }
+
+  /* Extra Small Devices, Phones */
+  @media only screen and (max-width : 480px) {
+
+  }
+
+  /* Custom, iPhone Retina */
+  @media only screen and (max-width : 320px) {
+
+  }
