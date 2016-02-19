@@ -17,13 +17,13 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12 content-panel">
-            <div class="titleContainer">
+            <div class="virusContainer">
               <div class="row">
                 <div class="col-md-12">
                   <img src="/img/drmariologo.svg" class="img-responsive">
-                  <h2>{{mainCtrl.title}}</h2>
-                </div>
 
+
+                </div>
               </div>
               <!--end row-->
             </div>
@@ -35,15 +35,15 @@
     </section>
 
 
-    <section class="buffer">
+    <section class="buffer" ng-controller="virusController as virusCtrl">
       <div class="container">
         <div class="section-tag">Viruses</div>
         <div class="row">
-          <div class="col-md-4 content-panel">
+          <div class="col-md-4 content-panel" ng-repeat="virus in viruses">
             <div class="titleContainer">
               <div class="row">
                 <div class="col-md-12">
-                  <img src="/img/drmariologo.svg" class="img-responsive">
+                  <img ng-src="/img/{{virus.image}}" class="img-responsive">
                   <h2>{{mainCtrl.title}}</h2>
                 </div>
 
@@ -82,6 +82,7 @@
 
   <!--Controllers-->
   <script src="js/controllers/mainController.js"></script>
+  <script src="js/controllers/virusController.js"></script>
   <!--main Controller-->
   <!-- Services -->
 
