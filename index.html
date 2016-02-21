@@ -21,7 +21,7 @@
               <div class="row">
                 <div class="col-md-12">
                   <img src="/img/drmariologo.svg" class="img-responsive">
-
+                  <h2>{{mainCtrl.title}}</h2>
 
                 </div>
               </div>
@@ -37,7 +37,11 @@
 
     <section class="buffer" ng-controller="virusController as virusCtrl">
       <div class="container">
-        <div class="section-tag">Viruses</div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="section-tag"><h2>Viruses<h2></div>
+          </div>
+          </div><!--end row-->
         <div class="row">
 
           <div class="col-md-4 content-panel" ng-repeat="virus in viruses">
@@ -45,7 +49,24 @@
               <div class="row">
                 <div class="col-md-12">
                   <img ng-src="/img/{{virus.image}}" class="img-responsive">
-                  <h2>{{mainCtrl.title}}</h2>
+
+                </div>
+
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <ul class="nav nav-pills">
+                    <li ng-class="{active: tab === 1}"><a href=""  ng-click="tab = 1"></a></li>
+                    <li ng-class="{active: tab === 2}"><a href=""  ng-click="tab = 2"></a></li>
+                    <li ng-class="{active: tab === 3}"><a href=""  ng-click="tab = 3"></a></li>
+                  </ul><!--end ul-->
+                </div><!--end col-md-12-->
+              </div><!--end row-->
+              <!--end row-->
+              <div class="row">
+                <div class="col-md-12">
+
+
                 </div>
 
               </div>
@@ -58,6 +79,33 @@
         <!--end container-->
     </section>
 
+    <section class="buffer" ng-controller="pillsController as pillsCtrl">
+
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="section-tag"><h2>Medication<h2></div>
+          </div>
+          </div><!--end row-->
+          <div class="row">
+          <div class="col-md-4 content-panel" ng-repeat="pill in pills">
+            <div class="virusContainer">
+              <div class="row">
+                <div class="col-md-12">
+                  <img ng-src="/img/{{pill.image}}" class="img-responsive">
+                  <h2></h2>
+                </div>
+
+              </div>
+              <!--end row-->
+            </div>
+            <!--end col-md-12-->
+          </div>
+          <!--end row-->
+        </div>
+        <!--end container-->
+    </section>
 
 
 
@@ -84,6 +132,7 @@
   <!--Controllers-->
   <script src="js/controllers/mainController.js"></script>
   <script src="js/controllers/virusController.js"></script>
+  <script src="js/controllers/pillsController.js"></script>
   <!--main Controller-->
   <!-- Services -->
 
