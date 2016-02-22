@@ -27,8 +27,11 @@ body {
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 5px;
   border: 1px solid #656565;
-  min-height: 100px;
-  padding:20px
+  min-height:400px;
+  padding:20px;
+  -webkit-box-shadow: 0px 6px 5px 1px rgba(0,0,0,0.3);
+-moz-box-shadow: 0px 6px 5px 1px rgba(0,0,0,0.3);
+box-shadow: 0px 6px 5px 1px rgba(0,0,0,0.3);
 }
 .title-container {
   margin-top: 5em;
@@ -45,24 +48,20 @@ body {
 .section-tag {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0.27+0,1+100 */
-  background: -moz-linear-gradient(left, rgba(255, 255, 255, 0.27) 0%, rgba(255, 255, 255, 1) 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.27) 0%, rgba(255, 255, 255, 1) 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.27) 0%, rgba(255, 255, 255, 1) 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#45ffffff', endColorstr='#ffffff', GradientType=1);
-  /* IE6-9 */
-  padding: 10px 15px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px 15px 0px;
   min-height: 50px;
   margin: 10px -0px 10px -14px;
   display: block;
+  border-bottom:3px solid #656565;
 }
 .virus-container {
   padding: 10px 0px;
-  min-height:340px;
+
   margin:5px;
+}
+.virus-container h3{
+  text-align:center
 }
 .virus-nav li {
   border-radius: 5px;
@@ -84,9 +83,23 @@ body {
   height: 100px;
   margin: 10px auto;
 }
-.virus-content{
 
+/*==========  Footer  ==========*/
+
+footer{
+  background-color: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.7);
+  color: rgba(0, 0, 0, 0.7);
+    min-height:100px;
+    margin-top:50px;
+    -webkit-box-shadow: 0px -5px 5px 1px rgba(0,0,0,0.3);
+-moz-box-shadow: 0px -5px 5px 1px rgba(0,0,0,0.3);
+box-shadow: 0px -5px 5px 1px rgba(0,0,0,0.3);
 }
+footer p{
+  color:white;
+}
+
 /*==========  Non-Mobile First Method  ==========*/
 
 
