@@ -15,8 +15,8 @@ body {
   padding-top: 60px;
 }
 
-
 /*Navbar Styling*/
+
 .navbar-default {
   background-color: rgba(255, 255, 255, 0.8);
 }
@@ -27,69 +27,85 @@ body {
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 5px;
   border: 1px solid #656565;
-  min-height:100px
+  min-height: 100px;
+  padding:20px
 }
-.titleContainer{
-  margin-top:5em;
-  margin-bottom:5em;
-  width:100%;
-
-
+.title-container {
+  margin-top: 5em;
+  margin-bottom: 5em;
+  width: 100%;
 }
-.titleContainer img{
-  margin:0 auto;
+.title-container img {
+  margin: 0 auto;
 }
-.titleContainer h2{
-  margin:0 auto;
-  text-align:center
+.title-container h2 {
+  margin: 0 auto;
+  text-align: center
 }
-
-.section-tag{
-  border-top-right-radius:5px;
-  border-bottom-right-radius:5px;
+.section-tag {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0.27+0,1+100 */
-  background: -moz-linear-gradient(left,  rgba(255,255,255,0.27) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(left,  rgba(255,255,255,0.27) 0%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right,  rgba(255,255,255,0.27) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
-
-padding:10px 15px;
-min-height:50px;
-margin: 10px -0px 10px -14px;
-display:block;
+  background: -moz-linear-gradient(left, rgba(255, 255, 255, 0.27) 0%, rgba(255, 255, 255, 1) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.27) 0%, rgba(255, 255, 255, 1) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.27) 0%, rgba(255, 255, 255, 1) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#45ffffff', endColorstr='#ffffff', GradientType=1);
+  /* IE6-9 */
+  padding: 10px 15px;
+  min-height: 50px;
+  margin: 10px -0px 10px -14px;
+  display: block;
+}
+.virus-container {
+  padding: 10px 0px;
+  min-height:340px;
+  margin:5px;
+}
+.virus-nav li {
+  border-radius: 5px;
+  padding: 5px;
+}
+.nav-pills > li.tabActive > a {
+  background-color: #ffb3ee;
+  color:#fff;
+}
+.nav-pills > li > a:hover {
+  background-color: #fcadad;
+  color:#fff;
+}
+.nav-pills > li.tabActive > a:hover {
+  background-color: #ffb3ee;
+  color:#fff;
+}
+.virus-container img {
+  height: 100px;
+  margin: 10px auto;
+}
+.virus-content{
 
 }
-.virusContainer{
-  padding:20px 20px;
-}
-.virusContainer img{
-  height:100px;
-  margin:10px auto;
-}
-
 /*==========  Non-Mobile First Method  ==========*/
 
-  /* Large Devices, Wide Screens */
-  @media only screen and (max-width : 1200px) {
 
-  }
+/* Large Devices, Wide Screens */
 
-  /* Medium Devices, Desktops */
-  @media only screen and (max-width : 992px) {
+@media only screen and (max-width: 1200px) {}
 
-  }
+/* Medium Devices, Desktops */
 
-  /* Small Devices, Tablets */
-  @media only screen and (max-width : 768px) {
+@media only screen and (max-width: 992px) {}
 
-  }
+/* Small Devices, Tablets */
 
-  /* Extra Small Devices, Phones */
-  @media only screen and (max-width : 480px) {
+@media only screen and (max-width: 768px) {}
 
-  }
+/* Extra Small Devices, Phones */
 
-  /* Custom, iPhone Retina */
-  @media only screen and (max-width : 320px) {
+@media only screen and (max-width: 480px) {}
 
-  }
+/* Custom, iPhone Retina */
+
+@media only screen and (max-width: 320px) {}

@@ -8,7 +8,7 @@ app.controller('virusController',function($scope){
       severity: "mild",
       date_discovered: "",
       description:"A blue devil that chills the afflicted to the bone, sending them into uncontrollable convulsions.",
-      gallery: ['','',''],
+      gallery: 'blueanimate.gif',
       image:'chill.png'
     },
     {
@@ -18,7 +18,7 @@ app.controller('virusController',function($scope){
       severity: "severe",
       date_discovered: "",
       description:"A little red virus that causes the afflicted to hallucinate.",
-      gallery: ['','',''],
+      gallery: 'redanimate.gif',
       image:'fever.png'
     },
     {
@@ -28,7 +28,7 @@ app.controller('virusController',function($scope){
       severity: "severe",
       date_discovered: "",
       description:"A strange yellow fellow that causes depression and anxiety in the afflicted individual.",
-      gallery: ['','',''],
+      gallery: 'yellowanimate.gif',
       image:'weird.png'
     }
   ];

@@ -17,11 +17,11 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12 content-panel">
-            <div class="titleContainer">
+            <div class="title-container">
               <div class="row">
                 <div class="col-md-12">
                   <img src="/img/drmariologo.svg" class="img-responsive">
-                  <h2>{{mainCtrl.title}}</h2>
+                  <h2> {{mainCtrl.title}}</h2>
 
                 </div>
               </div>
@@ -35,17 +35,19 @@
     </section>
 
 
-    <section class="buffer" ng-controller="virusController as virusCtrl">
+    <section class="buffer" ng-controller="virusController as virusCtrl" ng-init="tab = 1">
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <div class="section-tag"><h2>Viruses<h2></div>
+            <div class="section-tag">
+              <h2>Viruses<h2></div>
           </div>
           </div><!--end row-->
         <div class="row">
 
-          <div class="col-md-4 content-panel" ng-repeat="virus in viruses">
-<div class="virusContainer">
+          <div class="col-md-4 " ng-repeat="virus in viruses">
+            <div class="content-panel">
+          <div class="virus-container">
               <div class="row">
                 <div class="col-md-12">
                   <img ng-src="/img/{{virus.image}}" class="img-responsive">
@@ -55,18 +57,32 @@
               </div>
               <div class="row">
                 <div class="col-md-12">
-                  <ul class="nav nav-pills">
-                    <li ng-class="{active: tab === 1}"><a href=""  ng-click="tab = 1"></a></li>
-                    <li ng-class="{active: tab === 2}"><a href=""  ng-click="tab = 2"></a></li>
-                    <li ng-class="{active: tab === 3}"><a href=""  ng-click="tab = 3"></a></li>
+                  <ul class="nav nav-pills virus-nav">
+                    <li ng-class="{tabActive: tab === 1}"><a href=""  ng-click="tab = 1">Description</a></li>
+                    <li ng-class="{tabActive: tab === 2}"><a href=""  ng-click="tab = 2">Symptoms</a></li>
+                    <li ng-class="{tabActive: tab === 3}"><a href=""  ng-click="tab = 3">Gallery</a></li>
                   </ul><!--end ul-->
                 </div><!--end col-md-12-->
               </div><!--end row-->
-              <!--end row-->
+              <div class="row">
+                <div class="col-md-12 virus-content">
+
+                </div<!--end col-md-12-->
+              </div><!--end row-->
               <div class="row">
                 <div class="col-md-12">
+                  <div class="panel" ng-show="tab ===1">
+                    <p><strong>Description: </strong> {{virus.description}}</p>
+                    <p><strong>Severity: </strong> {{virus.severity}}</p>
+                </div><!--end panel-->
+                <div class="panel" ng-show="tab ===2">
+                  <p><strong>Symptoms: </strong> {{virus.symptoms}}</p>
+                </div><!--end panel-->
+              <div class="panel" ng-show="tab ===3">
 
+                <img  ng-src="/img/{{virus.gallery}}">
 
+            </div><!--end panel-->
                 </div>
 
               </div>
@@ -75,6 +91,7 @@
             <!--end col-md-12-->
           </div>
           <!--end row-->
+        </div>
         </div>
         <!--end container-->
     </section>
@@ -90,21 +107,21 @@
           </div><!--end row-->
           <div class="row">
           <div class="col-md-4 content-panel" ng-repeat="pill in pills">
-            <div class="virusContainer">
+            <div class="virus-container">
               <div class="row">
                 <div class="col-md-12">
                   <img ng-src="/img/{{pill.image}}" class="img-responsive">
                   <h2></h2>
-                </div>
-
-              </div>
-              <!--end row-->
             </div>
-            <!--end col-md-12-->
+
           </div>
           <!--end row-->
         </div>
-        <!--end container-->
+        <!--end col-md-12-->
+      </div>
+      <!--end row-->
+      </div>
+      <!--end container-->
     </section>
 
 
