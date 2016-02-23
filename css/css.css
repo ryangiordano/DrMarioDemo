@@ -57,7 +57,7 @@ box-shadow: 0px 6px 5px 1px rgba(0,0,0,0.3);
 }
 .virus-container {
   padding: 10px 0px;
-
+  min-height:400px;
   margin:5px;
 }
 .virus-container h3{

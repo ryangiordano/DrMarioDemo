@@ -7,13 +7,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand"><img src="/img/drmariologo.svg" style="height:30px;margin-top:-5px"></a>
+      <a class="navbar-brand" ng-href="#home"><img src="/img/drmariologo.svg" style="height:30px;margin-top:-5px"></a>
     </div>
     <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li ng-class="{menuActive : }"><img src=""><a ui-sref="menu.mainMenu" ng-click="">Viruses</a></li>
-        <li><a href="" data-toggle="modal" data-target="#mapModal" ng-click="">Meds</a></li>
-        <li ng-class="{menuActive : }"><a href="#" ng-click="">Reviews</a></li>
+        <li ng-class=""><img src=""><a ng-href="#virus" ng-click="">Viruses</a></li>
+        <li><a ng-href="#pills" ng-click="">Pills</a></li>
+        <li ng-class=""><a href="#" ng-click="">Reviews</a></li>
       </ul>
 
     </div>

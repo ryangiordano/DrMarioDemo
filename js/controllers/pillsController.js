@@ -4,30 +4,29 @@ app.controller('pillsController',function($scope){
     {
       name: "Bluerazopan",
       color: "#15639D",
-      symptoms: "Low fever, shivering, runny nose, sore throat",
-      severity: "mild",
-      date_discovered: "",
+      alleviates: "Low fever, shivering, runny nose, sore throat",
+      date_discovered: '19880713T00:00:00',
       description:"A blue devil that chills the afflicted to the bone, sending them into uncontrollable convulsions.",
-      gallery: ['','',''],
-      image:'bluepill.png'
+      image:'bluepill.png',
+      popularity:1
     },
     {
       name: "Redisol",
       color: "#D62027",
-      symptoms: "High fever, sweats, headache, drowsiness",
-      severity: "severe",
-      date_discovered: "",
+      alleviates: "High fever, sweats, headache, drowsiness",
+      date_discovered: '19861102T00:00:00',
       description:"A fever reducer used in the treatment of high fevers.",
-      gallery: ['','',''],
-      image:'redpill.png'
+      image:'redpill.png',
+      popularity:2
     },
     {
       name: "Yellowzac",
       color: "#FDBD30",
-      date_discovered: "",
+      alleviates:'',
+      date_discovered: '19880219T00:00:00',
       description:"An anti-depressant used in the treatment of weird diseases.",
-      gallery: ['','',''],
-      image:'yellowpill.png'
+      image:'yellowpill.png',
+      popularity:3
     }
   ];
 });

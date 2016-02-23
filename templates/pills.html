@@ -1,0 +1,40 @@
+<section class="buffer">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-4">
+            <div class="section-tag">
+               <h2>
+               Medication
+               <h2>
+            </div>
+         </div>
+      </div>
+      <!--end row-->
+      <div class="row">
+         <div class="col-md-4 " ng-repeat="pill in pills">
+            <div class="content-panel">
+               <div class="virus-container">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <img ng-src="/img/{{pill.image}}" class="img-responsive">
+                        <h3>{{pill.name}}</h3>
+                     </div>
+                  </div>
+                  <!--end row-->
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p><strong>Description: </strong>{{pill.description}}</p>
+                      <p><strong>Alleviates: </strong>{{pill.alleviates}}</p>
+                      <p><strong>Date Developed: </strong>{{pill.date_discovered | date: 'MM/dd/yyyy'}}</p>
+                      <p><strong>Popularity: </strong>{{pill.popularity | ordinal}} most popular</p>
+                    </div><!--end col-md-12-->
+                  </div><!--end row-->
+               </div>
+               <!--end col-virus container-->
+            </div>
+            <!--end row-->
+         </div>
+      </div>
+      <!--end container-->
+   </div>
+</section>
