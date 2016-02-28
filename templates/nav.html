@@ -11,9 +11,10 @@
     </div>
     <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li ng-class=""><img src=""><a ng-href="#virus" ng-click="">Viruses</a></li>
-        <li><a ng-href="#pills" ng-click="">Pills</a></li>
-        <li ng-class=""><a href="#" ng-click="">Reviews</a></li>
+        <li ng-class=""ng-hide="mainCtrl.index == 1"><img src=""><a ng-href="#virus" ng-click="">Viruses</a></li>
+        <li><a ng-href="#pills" ng-click=""ng-hide="mainCtrl.index == 1">Pills</a></li>
+        <li ng-class=""ng-hide="mainCtrl.index == 1 || mainCtrl.index == 2"><a href="#reviews" ng-click="">Reviews</a></li>
+        <li ><a href="" onclick="menuToggle()"><img src="/img/menu.svg" style="height:30px;margin-top:-5px"id="menu-icon"></a></li>
       </ul>
 
     </div>
