@@ -1,0 +1,164 @@
+<DOCTYPE! html public>
+<html lang="en" >
+   <head>
+      <title>New Angular App</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.css">
+      <link rel="stylesheet" type="text/css" href="css/css.css">
+   </head>
+   <body ng-app="DoctorMario" ng-controller="mainController as mainCtrl" >
+      <div ng-include="'templates/nav.html'"></div>
+      <!--end navbar-->
+      <div ng-view></div>
+      <section class="buffer" >
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12 content-panel">
+                  <div class="title-container">
+                     <div class="row">
+                        <div class="col-md-12">
+                           <img src="/img/drmariologo.svg" class="img-responsive">
+                           <h2> {{mainCtrl.title}}</h2>
+                        </div>
+                     </div>
+                     <!--end row-->
+                  </div>
+                  <!--end col-md-12-->
+               </div>
+               <!--end row-->
+            </div>
+            <!--end container-->
+         </div>
+      </section>
+      <section class="buffer" ng-controller="virusController as virusCtrl" ng-init="tab = 1">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-4">
+                  <div class="section-tag">
+                     <h2>
+                     Viruses
+                     <h2>
+                  </div>
+               </div>
+            </div>
+            <!--end row-->
+            <div class="row">
+               <div class="col-md-4 " ng-repeat="virus in viruses">
+                  <div class="content-panel">
+                     <div class="virus-container">
+                        <div class="row">
+                           <div class="col-md-12">
+                              <img ng-src="/img/{{virus.image}}" class="img-responsive">
+                           </div>
+                           <h3>{{virus.name}}</h3>
+                        </div>
+                        <div class="row">
+                           <div class="col-md-12">
+                              <ul class="nav nav-pills virus-nav">
+                                 <li ng-class="{tabActive: tab === 1}"><a href=""  ng-click="tab = 1">Description</a></li>
+                                 <li ng-class="{tabActive: tab === 2}"><a href=""  ng-click="tab = 2">Symptoms</a></li>
+                                 <li ng-class="{tabActive: tab === 3}"><a href=""  ng-click="tab = 3">Gallery</a></li>
+                              </ul>
+                              <!--end ul-->
+                           </div>
+                           <!--end col-md-12-->
+                        </div>
+                        <!--end row-->
+                        <div class="row">
+                           <div class="col-md-12 virus-content">
+                              </div<!--end col-md-12-->
+                           </div>
+                           <!--end row-->
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <div class="panel" ng-show="tab ===1">
+                                    <p><strong>Description: </strong> {{virus.description}}</p>
+                                    <p><strong>Severity: </strong> {{virus.severity}}</p>
+                                    <p><strong>Date Discovered: </strong> {{virus.date_discovered | date: 'MM/dd/yyyy'}}</p>
+                                 </div>
+                                 <!--end panel-->
+                                 <div class="panel" ng-show="tab ===2">
+                                    <p><strong>Symptoms: </strong> {{virus.symptoms}}</p>
+                                 </div>
+                                 <!--end panel-->
+                                 <div class="panel" ng-show="tab ===3">
+                                    <img  ng-src="/img/{{virus.gallery}}">
+                                 </div>
+                                 <!--end panel-->
+                              </div>
+                           </div>
+                           <!--end row-->
+                        </div>
+                        <!--end col-md-12-->
+                     </div>
+                     <!--end row-->
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!--end container-->
+      </section>
+      <section class="buffer" ng-controller="pillsController as pillsCtrl">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-4">
+                  <div class="section-tag">
+                     <h2>
+                     Medication
+                     <h2>
+                  </div>
+               </div>
+            </div>
+            <!--end row-->
+            <div class="row">
+               <div class="col-md-4 " ng-repeat="pill in pills">
+                  <div class="content-panel">
+                     <div class="virus-container">
+                        <div class="row">
+                           <div class="col-md-12">
+                              <img ng-src="/img/{{pill.image}}" class="img-responsive">
+                              <h3>{{pill.name}}</h3>
+                           </div>
+                        </div>
+                        <!--end row-->
+                        <div class="row">
+                          <div class="col-md-12">
+                            <p><strong>Description: </strong>{{pill.description}}</p>
+                            <p><strong>Alleviates: </strong>{{pill.alleviates}}</p>
+                            <p><strong>Date Developed: </strong>{{pill.date_discovered | date: 'MM/dd/yyyy'}}</p>
+                            <p><strong>Popularity: </strong>{{pill.popularity | ordinal}} most popular</p>
+                          </div><!--end col-md-12-->
+                        </div><!--end row-->
+                     </div>
+                     <!--end col-virus container-->
+                  </div>
+                  <!--end row-->
+               </div>
+            </div>
+            <!--end container-->
+         </div>
+      </section>
+      <!-- <div ui-view></div> -->
+      <div ng-include="'templates/footer.html'"></div>
+      <!--end footer-->
+   </body>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+   <script src="js/vendor/gsap/jquery.gsap.min.js"></script>
+   <script src="js/vendor/bootstrap.js"></script>
+   <script src="https://maps.googleapis.com/maps/api/js"></script>
+   <script src="js/vendor/angular.min.js"></script>
+   <script src="js/vendor/angular-route.min.js"></script>
+   <script src="js/vendor/angular-animate.min.js"></script>
+   <script src="js/vendor/gsap/TimelineMax.min.js"></script>
+   <script src="js/vendor/gsap/TweenMax.min.js"></script>
+   <!-- App -->
+   <script src="js/app.js"></script>
+   <!-- Directives -->
+   <!--Controllers-->
+   <script src="js/controllers/mainController.js"></script>
+   <script src="js/controllers/virusController.js"></script>
+   <script src="js/controllers/pillsController.js"></script>
+   <!--main Controller-->
+   <!-- Services -->
+</html>
