@@ -1,4 +1,9 @@
 var app = angular.module("DoctorMario",['ngRoute']);
+
+
+
+
+
 app.filter('ordinal',function(){
   return function(number){
     if(isNaN(number) || number < 1){
@@ -55,7 +60,6 @@ app.config(function($routeProvider, $locationProvider){
     redirectTo: '/home'
   });
 });
-
 
 var menuToggle = function(){
 	var menuOver = document.getElementById("menu-over");
