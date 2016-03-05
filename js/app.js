@@ -23,7 +23,7 @@ app.filter('ordinal',function(){
     }
   }
 });
-app.config(function($routeProvider, $locationProvider){
+app.config(function($routeProvider){
   $routeProvider
   .when('/home',{
     templateUrl: 'templates/index.html'
