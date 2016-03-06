@@ -12,7 +12,7 @@
   <div class="row">
     <div class="col-md-6">
       <div class="review-panel">
-        <form name="reviewForm" ng-submit="addReview();">
+        <form name="reviewForm" id="reviewForm" ng-submit="addReview();" novalidate>
              <!--  Live Preview -->
           <blockquote>
             <h2>{{review.title}} </h2>
@@ -22,10 +22,10 @@
           </blockquote>
           <h4>Submit a Review</h4>
           <fieldset class="form-group">
-            <input ng-model="review.title" type="text" class="form-control" placeholder="Title" title="Title" />
+            <input required  ng-model="review.title" type="text" class="form-control" placeholder="Title" name="Title" />
           </fieldset>
           <fieldset class="form-group">
-            <select ng-model="review.rating" class="form-control" ng-options="stars for stars in [5,4,3,2,1]" title="Stars">
+            <select required ng-model="review.rating" class="form-control" ng-options="stars for stars in [5,4,3,2,1]" title="Stars">
               <option value="">Rate the Product</option>
             </select>
           </fieldset>
@@ -34,13 +34,14 @@
             <textarea ng-model="review.body" class="form-control" placeholder="Write a short review of the product..." title="Review"></textarea>
           </fieldset>
           <fieldset class="form-group">
-            <input ng-model="review.author" type="email" class="form-control" placeholder="jimmyDean@example.org" title="Email" />
+            <input required ng-model="review.author" type="email" class="form-control" placeholder="jimmyDean@example.org" title="Email" />
           </fieldset>
           <fieldset class="form-group">
-            <input type="submit" class="btn btn-primary pull-right" value="Submit Review" />
+            <input type="submit"  class="btn btn-primary pull-right" value="Submit Review" />
           </fieldset>
           </form>
         </div>
+        <!--ng-disabled="reviewForm.$invalid"-->
         <!--end review-panel-->
       </div>
       <!--end col-md-6-->

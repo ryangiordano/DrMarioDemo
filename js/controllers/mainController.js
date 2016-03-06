@@ -1,6 +1,6 @@
-app.controller('mainController',function(){
+app.controller('mainController',function($scope){
   var mainCtrl = this;
-  this.title = "Busting Viruses- One Pill at a Time";
+  $scope.title = "Busting Viruses- One Pill at a Time";
 
 
 });
