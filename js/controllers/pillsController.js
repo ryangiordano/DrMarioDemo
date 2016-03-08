@@ -6,7 +6,7 @@ app.controller('pillsController',function($scope){
       color: "#15639D",
       alleviates: "Low fever, shivering, runny nose, sore throat",
       date_discovered: '19880713T00:00:00',
-      description:"A blue devil that chills the afflicted to the bone, sending them into uncontrollable convulsions.",
+      description:"Alleviates symptoms of low fever and chills.",
       image:'bluepill.png',
       popularity:1
     },
@@ -22,7 +22,7 @@ app.controller('pillsController',function($scope){
     {
       name: "Yellowzac",
       color: "#FDBD30",
-      alleviates:'',
+      alleviates:'Depression, nausea',
       date_discovered: '19880219T00:00:00',
       description:"An anti-depressant used in the treatment of weird diseases.",
       image:'yellowpill.png',

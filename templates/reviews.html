@@ -37,11 +37,11 @@
             <input required ng-model="review.author" type="email" class="form-control" placeholder="jimmyDean@example.org" title="Email" />
           </fieldset>
           <fieldset class="form-group">
-            <input type="submit"  class="btn btn-primary pull-right" value="Submit Review" />
+            <input type="submit"  class="btn btn-primary pull-right"ng-disabled="reviewForm.$invalid" value="Submit Review" />
           </fieldset>
           </form>
         </div>
-        <!--ng-disabled="reviewForm.$invalid"-->
+        <!---->
         <!--end review-panel-->
       </div>
       <!--end col-md-6-->
